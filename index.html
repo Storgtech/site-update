@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
-
-
-	
 <head>
 	<title>StorgTech Tecnologias & Serviços, LDA</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,9 +43,9 @@
 								Sinta-se a vontande para contactar-nos nas redes sociais usando o link no rodapé da página.</p>
 
 							<div class="email-input-area">
-								<form onsubmit="emailSend(); reset(); return false;">
-									<input class="email-input" name="email" type="email" id="email" placeholder="Digite seu e-mail"/>
-									<button type="submit" class="btn"><b>Submeter</b></button>
+								<form method="post">
+									<input class="email-input" name="email" type="text" placeholder="Digite seu e-mail"/>
+									<button class="submit-btn" name="submit" type="submit"><b>Enviar</b></button>
 								</form>
 							</div><!-- email-input-area -->
 							
@@ -101,9 +97,5 @@
 	
 	<script src="common-js/scripts.js"></script>
 	
-       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-       <script src="https://smtpjs.com/v3/smtp.js"></script>
-	<script src="index.js"></script>
-
 </body>
 </html>
