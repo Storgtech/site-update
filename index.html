@@ -47,9 +47,9 @@
 								Sinta-se a vontande para contactar-nos nas redes sociais usando o link no rodapé da página.</p>
 
 							<div class="email-input-area">
-								<form method="post">
-									<input class="email-input" name="email" type="text" id="email" placeholder="Digite seu e-mail"/>
-									<button class="submit-btn" onclick="myFunction()"><b>Submeter</b></button>
+								<form onsubmit="emailSend(); reset(); return false;">
+									<input class="email-input" name="email" type="email" id="email" placeholder="Digite seu e-mail"/>
+									<button type="submit" class="btn"><b>Submeter</b></button>
 								</form>
 							</div><!-- email-input-area -->
 							
@@ -100,37 +100,10 @@
 	<script src="common-js/jquery.throttle.js"></script>
 	
 	<script src="common-js/scripts.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
 	
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("xD504XKjEqIXwXBMg");
-      })();
-    </script>
+       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+       <script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="Contact form to email.js"></script>
 
-<script>
-function myFunction() {
-  var params = {
-    email: document.getElementById("email").value,
-  };
-
-  const serviceID = "service_4zb8hpt";
-  const templateID = "template_uzhzgwh";
-
-    emailjs.send(serviceID, templateID, params)
-    .then(res=>{
-        document.getElementById("email").value = "";
-        console.log(res);
-        alert("Your message sent successfully!!")
-
-    })
-    .catch(err=>console.log(err));
-}
-</script>
-
-	
 </body>
 </html>
