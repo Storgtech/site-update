@@ -49,7 +49,7 @@
 							<div class="email-input-area">
 								<form method="post">
 									<input class="email-input" name="email" type="text" id="email" placeholder="Digite seu e-mail"/>
-									<button class="submit-btn" onclick="sendMail()"><b>Submeter</b></button>
+									<button class="submit-btn" onclick="myFunction()"><b>Submeter</b></button>
 								</form>
 							</div><!-- email-input-area -->
 							
@@ -100,22 +100,22 @@
 	<script src="common-js/jquery.throttle.js"></script>
 	
 	<script src="common-js/scripts.js"></script>
-	<script>
-
-function sendMail() {
-  alert("I am an alert box!");
-}	
-	</script>
-
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
+	
     <script type="text/javascript">
       (function () {
         emailjs.init("xD504XKjEqIXwXBMg");
       })();
     </script>
+
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+</script>
 
 	
 </body>
